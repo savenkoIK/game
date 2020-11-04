@@ -68,7 +68,7 @@ function itemHandler(player, item) {
   if (item.key === 'coin') {
      currentScore = currentScore + 10;
   } else if (item.key === 'poison') {
-     currentScore = currentScore - 20;
+     reload(true);
   } else if (item.key === 'star') {
      currentScore = currentScore + 20;
   }
@@ -77,6 +77,7 @@ function itemHandler(player, item) {
       item.kill();
   }
 }
+
 
 // when the player collects the badge at the end of the game
 function badgeHandler(player, badge) {
@@ -155,7 +156,7 @@ window.onload = function () {
     if (won) {
       winningMessage.text = "YOU WIN!!!";
     }
-  }
+
 
   function render() {
 
