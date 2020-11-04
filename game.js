@@ -10,7 +10,7 @@ var text;
 var winningMessage;
 var won = false;
 var currentScore = 0;
-var winningScore = 105;
+var winningScore = 100;
 
 // add collectable items to the game
 function addItems() {
@@ -67,9 +67,9 @@ function itemHandler(player, item) {
   if (item.key === 'coin') {
      currentScore = currentScore + 10;
   } else if (item.key === 'poison') {
-     currentScore = currentScore - 20;
+     currentScore = currentScore - 25;
   } else if (item.key === 'star') {
-     currentScore = currentScore + 20;
+     currentScore = currentScore + 25;
   }
   if (currentScore === winningScore) {
       createBadge();
