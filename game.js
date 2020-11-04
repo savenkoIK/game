@@ -9,6 +9,7 @@ var jumpButton;
 var text;
 var winningMessage;
 var won = false;
+var failed = false;
 var currentScore = 0;
 var winningScore = 100;
 
@@ -73,6 +74,7 @@ function itemHandler(player, item) {
   }
   if (currentScore === winningScore) {
       createBadge();
+      item.kill();
   }
 }
 
