@@ -73,6 +73,7 @@ function itemHandler(player, item) {
   }
   if (currentScore === winningScore) {
       createBadge();
+      item.kill();
   }
 }
 
