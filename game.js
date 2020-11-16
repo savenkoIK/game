@@ -73,10 +73,8 @@ function itemHandler(player, item) {
   }
   if (currentScore === winningScore) {
       createBadge();
-      item.kill();
   }
 }
-
 
 // when the player collects the badge at the end of the game
 function badgeHandler(player, badge) {
@@ -155,11 +153,10 @@ window.onload = function () {
     if (won) {
       winningMessage.text = "YOU WIN!!!";
     }
-
+  }
 
   function render() {
 
   }
 
-}
-}
+};
