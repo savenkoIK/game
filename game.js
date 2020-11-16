@@ -76,13 +76,14 @@ function itemHandler(player, item) {
 }
   if (currentScore === winningScore) {
       createBadge();
-      item.kill();
+
   }
 }
 
 // when the player collects the badge at the end of the game
 function badgeHandler(player, badge) {
   badge.kill();
+  poison.kill();
   won = true;
   window.onload = timedRefresh(2000);
 }
