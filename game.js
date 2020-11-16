@@ -71,12 +71,9 @@ function itemHandler(player, item) {
   } else if (item.key === 'star') {
      currentScore = currentScore + 20;
   }
-  function timedRefresh(timeoutPeriod) {
-	   setTimeout("location.reload(true);",timeoutPeriod);
-}
+
   if (currentScore === winningScore) {
       createBadge();
-
   }
 }
 
@@ -85,7 +82,7 @@ function badgeHandler(player, badge) {
   badge.kill();
   poison.kill();
   won = true;
-  window.onload = timedRefresh(2000);
+
 }
 
 // setup game when the web page loads
